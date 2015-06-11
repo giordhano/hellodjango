@@ -99,3 +99,104 @@
 2015-06-11T22:18:53.489940+00:00 heroku[web.1]: State changed from up to crashed
 2015-06-11T22:19:08.710425+00:00 heroku[api]: Scale to web=1 by giordhanovaldez@gmail.com
 2015-06-11T22:19:50.097409+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=aqueous-sands-2148.herokuapp.com request_id=81b7e245-3321-49d2-b003-168ed85af393 fwd="190.42.16.99" dyno= connect= service= status=503 bytes=
+2015-06-11T22:30:36.979642+00:00 app[web.1]:     worker.init_process()
+2015-06-11T22:30:36.979644+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2015-06-11T22:30:36.979645+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2015-06-11T22:30:36.979647+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2015-06-11T22:30:36.979648+00:00 app[web.1]:     self.callable = self.load()
+2015-06-11T22:30:36.979650+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2015-06-11T22:30:36.979651+00:00 app[web.1]:     return self.load_wsgiapp()
+2015-06-11T22:30:36.979652+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2015-06-11T22:30:36.979654+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2015-06-11T22:30:36.979655+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/util.py", line 355, in import_app
+2015-06-11T22:30:36.979656+00:00 app[web.1]:     __import__(module)
+2015-06-11T22:30:36.979658+00:00 app[web.1]:   File "/app/hellodjango/wsgi.py", line 22, in <module>
+2015-06-11T22:30:36.979659+00:00 app[web.1]:     application = Cling(get_wsgi_application())
+2015-06-11T22:30:36.979660+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+2015-06-11T22:30:36.979662+00:00 app[web.1]:     django.setup()
+2015-06-11T22:30:36.979663+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/__init__.py", line 17, in setup
+2015-06-11T22:30:36.979666+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/conf/__init__.py", line 48, in __getattr__
+2015-06-11T22:30:36.979665+00:00 app[web.1]:     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+2015-06-11T22:30:36.979668+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/conf/__init__.py", line 42, in _setup
+2015-06-11T22:30:36.979667+00:00 app[web.1]:     self._setup(name)
+2015-06-11T22:30:36.979669+00:00 app[web.1]:     % (desc, ENVIRONMENT_VARIABLE))
+2015-06-11T22:30:36.979672+00:00 app[web.1]: django.core.exceptions.ImproperlyConfigured: Requested setting LOGGING_CONFIG, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+2015-06-11T22:30:36.979673+00:00 app[web.1]: Traceback (most recent call last):
+2015-06-11T22:30:36.979674+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2015-06-11T22:30:36.979676+00:00 app[web.1]:     worker.init_process()
+2015-06-11T22:30:36.979677+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2015-06-11T22:30:36.979678+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2015-06-11T22:30:36.979680+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2015-06-11T22:30:36.979681+00:00 app[web.1]:     self.callable = self.load()
+2015-06-11T22:30:36.979682+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2015-06-11T22:30:36.979684+00:00 app[web.1]:     return self.load_wsgiapp()
+2015-06-11T22:30:36.979687+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/util.py", line 355, in import_app
+2015-06-11T22:30:36.979688+00:00 app[web.1]:     __import__(module)
+2015-06-11T22:30:36.979685+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2015-06-11T22:30:36.979686+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2015-06-11T22:30:36.979690+00:00 app[web.1]:   File "/app/hellodjango/wsgi.py", line 22, in <module>
+2015-06-11T22:30:36.979691+00:00 app[web.1]:     application = Cling(get_wsgi_application())
+2015-06-11T22:30:36.979692+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+2015-06-11T22:30:36.979693+00:00 app[web.1]:     django.setup()
+2015-06-11T22:30:36.979695+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/__init__.py", line 17, in setup
+2015-06-11T22:30:36.979696+00:00 app[web.1]:     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+2015-06-11T22:30:36.979697+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/conf/__init__.py", line 48, in __getattr__
+2015-06-11T22:30:36.979699+00:00 app[web.1]:     self._setup(name)
+2015-06-11T22:30:36.979700+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/conf/__init__.py", line 42, in _setup
+2015-06-11T22:30:36.979709+00:00 app[web.1]: django.core.exceptions.ImproperlyConfigured: Requested setting LOGGING_CONFIG, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+2015-06-11T22:30:36.979701+00:00 app[web.1]:     % (desc, ENVIRONMENT_VARIABLE))
+2015-06-11T22:30:36.979982+00:00 app[web.1]: [2015-06-11 22:30:36 +0000] [8] [INFO] Worker exiting (pid: 8)
+2015-06-11T22:30:37.093731+00:00 app[web.1]: [2015-06-11 22:30:37 +0000] [3] [INFO] Shutting down: Master
+2015-06-11T22:30:37.093868+00:00 app[web.1]: [2015-06-11 22:30:37 +0000] [3] [INFO] Reason: Worker failed to boot.
+2015-06-11T22:30:36.982418+00:00 app[web.1]: [2015-06-11 22:30:36 +0000] [7] [ERROR] Exception in worker process:
+2015-06-11T22:30:36.982420+00:00 app[web.1]: Traceback (most recent call last):
+2015-06-11T22:30:36.982422+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2015-06-11T22:30:36.982423+00:00 app[web.1]:     worker.init_process()
+2015-06-11T22:30:36.982424+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2015-06-11T22:30:36.982426+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2015-06-11T22:30:36.982427+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2015-06-11T22:30:36.982428+00:00 app[web.1]:     self.callable = self.load()
+2015-06-11T22:30:36.982430+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2015-06-11T22:30:36.982431+00:00 app[web.1]:     return self.load_wsgiapp()
+2015-06-11T22:30:36.982432+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2015-06-11T22:30:36.982433+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2015-06-11T22:30:36.982434+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/util.py", line 355, in import_app
+2015-06-11T22:30:36.982436+00:00 app[web.1]:     __import__(module)
+2015-06-11T22:30:36.982437+00:00 app[web.1]:   File "/app/hellodjango/wsgi.py", line 22, in <module>
+2015-06-11T22:30:36.982438+00:00 app[web.1]:     application = Cling(get_wsgi_application())
+2015-06-11T22:30:36.982441+00:00 app[web.1]:     django.setup()
+2015-06-11T22:30:36.982439+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+2015-06-11T22:30:36.982442+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/__init__.py", line 17, in setup
+2015-06-11T22:30:36.982447+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/conf/__init__.py", line 42, in _setup
+2015-06-11T22:30:36.982443+00:00 app[web.1]:     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+2015-06-11T22:30:36.982445+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/conf/__init__.py", line 48, in __getattr__
+2015-06-11T22:30:36.982446+00:00 app[web.1]:     self._setup(name)
+2015-06-11T22:30:36.982448+00:00 app[web.1]:     % (desc, ENVIRONMENT_VARIABLE))
+2015-06-11T22:30:36.982484+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2015-06-11T22:30:36.982450+00:00 app[web.1]: django.core.exceptions.ImproperlyConfigured: Requested setting LOGGING_CONFIG, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+2015-06-11T22:30:36.982451+00:00 app[web.1]: Traceback (most recent call last):
+2015-06-11T22:30:36.982487+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2015-06-11T22:30:36.982486+00:00 app[web.1]:     worker.init_process()
+2015-06-11T22:30:36.982504+00:00 app[web.1]:     return self.load_wsgiapp()
+2015-06-11T22:30:36.982488+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2015-06-11T22:30:36.982489+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2015-06-11T22:30:36.982505+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2015-06-11T22:30:36.982502+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2015-06-11T22:30:36.982506+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2015-06-11T22:30:36.982501+00:00 app[web.1]:     self.callable = self.load()
+2015-06-11T22:30:36.982511+00:00 app[web.1]:     application = Cling(get_wsgi_application())
+2015-06-11T22:30:36.982512+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+2015-06-11T22:30:36.982513+00:00 app[web.1]:     django.setup()
+2015-06-11T22:30:36.982507+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/gunicorn/util.py", line 355, in import_app
+2015-06-11T22:30:36.982510+00:00 app[web.1]:   File "/app/hellodjango/wsgi.py", line 22, in <module>
+2015-06-11T22:30:36.982508+00:00 app[web.1]:     __import__(module)
+2015-06-11T22:30:36.982516+00:00 app[web.1]:     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+2015-06-11T22:30:36.982518+00:00 app[web.1]:     self._setup(name)
+2015-06-11T22:30:36.982526+00:00 app[web.1]: django.core.exceptions.ImproperlyConfigured: Requested setting LOGGING_CONFIG, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+2015-06-11T22:30:36.982520+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/conf/__init__.py", line 42, in _setup
+2015-06-11T22:30:36.982515+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/__init__.py", line 17, in setup
+2015-06-11T22:30:36.982521+00:00 app[web.1]:     % (desc, ENVIRONMENT_VARIABLE))
+2015-06-11T22:30:36.982517+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.4/site-packages/django/conf/__init__.py", line 48, in __getattr__
+2015-06-11T22:30:36.982719+00:00 app[web.1]: [2015-06-11 22:30:36 +0000] [7] [INFO] Worker exiting (pid: 7)
+2015-06-11T22:30:37.957530+00:00 heroku[web.1]: Process exited with status 3
+2015-06-11T22:30:37.966991+00:00 heroku[web.1]: State changed from starting to crashed
