@@ -10,11 +10,8 @@ future==0.14.3
 gunicorn==19.3.0
 jdcal==1.0
 psycopg2==2.5.3
-pyIsEmail==1.1.0
-pywin32==219
 queuelib==1.2.2
 static3==0.6.1
-validate-email==1.2
 virtualenv==13.0.3
 w3lib==1.11.0
 wheel==0.24.0
